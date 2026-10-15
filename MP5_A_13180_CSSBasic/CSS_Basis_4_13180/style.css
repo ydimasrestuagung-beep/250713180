@@ -1,0 +1,38 @@
+/* Linked Style Sheet */
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+.box {
+    border: 2px solid teal;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #e0ffff;
+    color: darkslategray;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+h2 {
+    color: darkgreen;
+    margin-top: 20px;
+    text-align: left;
+}
