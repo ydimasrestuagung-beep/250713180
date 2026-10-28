@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registrasi Seminar Teknologi</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<div class="container">
+<h1>Registrasi Seminar Teknologi</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+<h2>Informasi Peserta</h2>
+
+<label>Nama Lengkap</label>
+<input type="text" name="nama" />
+
+<label>NIM</label>
+<input type="text" name="nim" />
+
+<label>Jenis Kelamin</label><br />
+<input type="radio" name="jk" /> Laki-Laki
+<input type="radio" name="jk" /> Perempuan
+
+<br /><br />
+
+<label>Program Studi</label>
+<select name="prodi">
+<option>Informatika</option>
+<option>Sistem Informasi</option>
+<option>Teknik Industri</option>
+</select>
+
+<h2>Pilihan Seminar</h2>
+
+<label>Jenis Tiket</label><br />
+<input type="radio" name="tiket" /> Reguler
+<input type="radio" name="tiket" /> VIP
+
+<br /><br />
+
+<label>Topik yang Diminati</label><br />
+<input type="checkbox" /> Web Development<br />
+<input type="checkbox" /> Data Science<br />
+<input type="checkbox" /> Artificial Intelligence
+
+<h2>Keterangan Tambahan</h2>
+
+<label>Tujuan Mengikuti Seminar</label>
+<textarea rows="5"></textarea>
+
+<label>Upload Bukti Pembayaran</label>
+<input type="file" name="bukti" />
+
+<div class="center">
+<input type="submit" value="Kirim Pendaftaran" class="btn" />
+</div>
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Pendaftaran Mahasiswa Baru</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Pendaftaran Mahasiswa Baru</h1>
+    <p class="subjudul">
+        Silakan lengkapi data diri berikut untuk proses registrasi mahasiswa.
+    </p>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td><input type="text" name="namamhs" /></td>
+            </tr>
+
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>
+                    <input type="radio" name="jk" value="Laki-Laki" /> Laki-Laki
+                    <input type="radio" name="jk" value="Perempuan" /> Perempuan
+                </td>
+            </tr>
+
+            <tr>
+                <td>Program Studi</td>
+                <td>
+                    <select name="prodi">
+                        <option>Informatika</option>
+                        <option>Sistem Informasi</option>
+                        <option>Teknik Industri</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email Aktif</td>
+                <td><input type="text" name="email" /></td>
+            </tr>
+
+            <tr>
+                <td>Nomor Handphone</td>
+                <td><input type="text" name="telepon" /></td>
+            </tr>
+
+            <tr>
+                <td>Password Akun</td>
+                <td><input type="password" name="password" /></td>
+            </tr>
+
+            <tr>
+                <td>Unggah Foto</td>
+                <td><input type="file" name="photo" /></td>
+            </tr>
+
+            <tr>
+                <td>Asal Sekolah</td>
+                <td><input type="text" name="namasmu" /></td>
+            </tr>
+
+            <tr>
+                <td>Minat dan Hobi</td>
+                <td>
+                    <strong>Musik</strong><br />
+                    <input type="checkbox" /> Pop
+                    <input type="checkbox" /> Rock
+                    <input type="checkbox" /> Jazz
+
+                    <br /><br />
+
+                    <strong>Film</strong><br />
+                    <input type="checkbox" /> Drama
+                    <input type="checkbox" /> Action
+                    <input type="checkbox" /> Sci-Fi
+                </td>
+            </tr>
+
+            <tr>
+                <td>Deskripsi Singkat</td>
+                <td>
+                    <textarea rows="6" cols="30"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="center">
+                    <input type="submit" value="Daftar Sekarang" class="btn" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
