@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <title>If-Else Internal: Tiket Bioskop</title>
+
+    <script type="text/javascript">
+        var iUmur;
+        var sMember;
+
+        iUmur = prompt("Masukkan umur Anda:", 0);
+        sMember = prompt("Apakah Anda member? (Y/T)", "Y");
+
+        if(iUmur > 17){
+            if(sMember == "Y"){
+                alert("Tiket dewasa member: Rp 30.000");
+            }else{
+                alert("Tiket dewasa umum: Rp 40.000");
+            }
+        }else{
+            if(sMember == "Y"){
+                alert("Tiket anak member: Rp 15.000");
+            }else{
+                alert("Tiket anak umum: Rp 20.000");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>If-Else Internal: Tiket Bioskop</h1>
+
+    <p>Reload halaman untuk mencoba lagi.</p>
+</body>
+</html>
