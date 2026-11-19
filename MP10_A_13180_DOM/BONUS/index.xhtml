@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="otherKurs.js"></script>
+    <title>Bonus - Mata Uang Lainnya</title>
+</head>
+
+<body>
+
+    <h3>Info Mata Uang (DOM Attributes)</h3>
+
+    <div id="kartuMataUang" data-aktif="none"
+         style="width: 280px; padding: 15px; border: 2px solid black;
+         background-color: #f0f0f0;">
+         Pilih Mata Uang
+    </div>
+
+    <p id="logAtribut">Kode Aktif: none</p>
+
+    <p>
+        <input type="button" value="USD (Amerika)"
+               onclick="gantiInfo('USD','#d4edda',
+               'Dolar Amerika Serikat (US$1 = Rp18.246)')" />
+
+        <input type="button" value="EUR (Eropa)"
+               onclick="gantiInfo('EUR','#cce5ff',
+               'Euro Eropa (EUR 1 = Rp20.089)')" />
+
+        <input type="button" value="JPY (Jepang)"
+               onclick="gantiInfo('JPY','#fff3cd',
+               'Yen Jepang (JPY 1 = Rp115)')" />
+    </p>
+
+</body>
+
+</html>

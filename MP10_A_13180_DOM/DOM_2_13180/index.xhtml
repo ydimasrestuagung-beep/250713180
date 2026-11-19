@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="domKurs.js"></script>
+    <title>DOM Konversi Kurs</title>
+</head>
+
+<body onload="init()">
+    <h3>Kalkulator Konversi Kurs (DOM)</h3>
+
+    <p>
+        Nominal Rupiah (IDR):
+        <input id="idr" value="150000" maxlength="20" />
+    </p>
+
+    <p>
+        <input type="button" value="Konversi"
+               onclick="hitungKurs('idr')" />
+    </p>
+
+    <p>
+        Hasil Konversi: US$<span id="hasil">0</span>
+    </p>
+</body>
+
+</html>
