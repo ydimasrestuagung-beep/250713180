@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .produk {
+            width: 220px;
+            text-align: center;
+        }
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+        #keranjang {
+            margin-top: 30px;
+            text-align: center;
+        }
+        #daftarKeranjang {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function() {
+        let keranjang = [];
+
+        $(".btnTambah").click(function() {
+            const produk = $(this).closest(".produk");
+            const nama = produk.find(".nama").text();
+            const harga = parseInt(produk.find(".harga").val());
+
+            const item = keranjang.find(p => p.nama === nama);
+
+            if (item) {
+                item.jumlah++;
+            } else {
+                keranjang.push({nama: nama, harga: harga, jumlah: 1});
+            }
+
+            $("#daftarKeranjang").empty();
+
+            $.each(keranjang, function(i, p) {
+                $("#daftarKeranjang").append(
+                    "<li>" + p.nama + " - Rp" +
+                    p.harga.toLocaleString("id-ID") +
+                    " x " + p.jumlah + " = Rp" +
+                    (p.harga * p.jumlah).toLocaleString("id-ID") +
+                    "</li>"
+                );
+            });
+        });
+    });
+    //]]>
+    </script>
+</head>
+<body>
+    <h1>Katalog Produk Online</h1>
+    <p style="text-align: center;">Silakan pilih produk yang ingin Anda beli.</p>
+
+    <div class="container">
+        <div class="produk">
+            <h3 class="nama">Headphone</h3>
+            <p>Harga: Rp150.000</p>
+            <input type="hidden" class="harga" value="150000" />
+            <button type="button" class="btnTambah">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="produk">
+            <h3 class="nama">Keyboard</h3>
+            <p>Harga: Rp200.000</p>
+            <input type="hidden" class="harga" value="200000" />
+            <button type="button" class="btnTambah">Tambah ke Keranjang</button>
+        </div>
+
+        <div class="produk">
+            <h3 class="nama">Mouse Wireless</h3>
+            <p>Harga: Rp100.000</p>
+            <input type="hidden" class="harga" value="100000" />
+            <button type="button" class="btnTambah">Tambah ke Keranjang</button>
+        </div>
+    </div>
+
+    <div id="keranjang">
+        <h2>Keranjang Belanja</h2>
+        <ul id="daftarKeranjang"></ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="id" lang="id">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+            type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .highlight {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        button {
+            margin: 5px;
+            pa1dding: 8px 15px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btnwarna').click(function() {
+                $('#judul').css({
+                    'color': 'blue',
+                    'font-size': '28px'
+                });
+            });
+
+            $('#btnHighlight').click(function() {
+                $('#deskripsi').addClass("highlight");
+                   
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2 id="judul">Profil Mahasiswa</h2>
+    <p id="deskripsi">
+        Setiap mahasiswa memiliki potensi dan kesempatan untuk terus belajar serta berkembang.
+    </p>
+
+    <button id="btnwarna">Ubah Warna Judul</button>
+    <button id="btnHighlight">Tambahkan Highlight</button>
+</body>
+</xhtml>

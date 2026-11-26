@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Kartu Informasi Mahasiswa</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style type="text/css">
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            margin-top:50px;
+        }
+
+        #kartu{
+            width:300px;
+            margin:auto;
+            padding:20px;
+            border:2px solid #ccc;
+            border-radius:10px;
+            background-color:white;
+            transition:all 0.3s ease;
+        }
+
+        #status{
+            margin-top:20px;
+            font-weight:bold;
+            color:#333;
+        }
+    </style>
+
+    <script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+    $("#kartu").hover(
+
+        function(){
+
+            $(this).css({
+                "background-color":"#d4edda",
+                "border":"2px solid green",
+                "transform":"scale(1.05)"
+            });
+
+            $("#status").text("Mouse berada di atas kartu!");
+        },
+
+        function(){
+
+            $(this).css({
+                "background-color":"white",
+                "border":"2px solid #ccc",
+                "transform":"scale(1)"
+            });
+
+            $("#status").text("Arahkan mouse ke kartu!");
+        }
+
+    );
+
+});
+//]]>
+     </script>
+
+</head>
+
+<body>
+
+    <h1>Informasi Mahasiswa</h1>
+
+    <p id="status">Mouse berada di atas kartu!</p>
+
+    <div id="kartu">
+
+        <h2>
+            Informasi Data<br/>
+            Mahasiswa
+        </h2>
+
+        <p>Nama: Yusuf Dimas Restu Agung</p>
+        <p>Program Studi: Informatika</p>
+        <p>Universitas Atma Jaya Yogyakarta</p>
+
+    </div>
+
+</body>
+</html>
+
+

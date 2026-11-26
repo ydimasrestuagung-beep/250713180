@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="id" lang="id">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+            type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .hasil {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid gray;
+            width: 300px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btnSapa').click(function() {
+                const nama = $('#nama').val();
+                $('#hasilNama').text(
+                    nama === "" ? "Nama belum diisi!" : "Halo, " + nama + "! Selamat belajar jQuery."
+                ).css("color", nama === "" ? "red" : "black");
+            });
+            $("#pilihwarna").change(function() {
+                const warna = $(this).val();
+                $("#hasilWarna")
+                .text(warna === "" ?
+                "Warna yang dipilih akan ditampilkan di sini." :
+                "Anda memilih warna: " + warna)
+                .css("color", warna === "" ? "black" : warna);
+                
+            });
+                   
+         });
+        
+    </script>
+</head>
+<body>
+    <h2> Interaksi Pengguna</h2>
+    <h3> 1. Menyapa Pengguna</h3>
+    <label for="nama">Masukkan Nama:</label>
+    <input type="text" id="nama" />
+    <button id="btnSapa">Sapa Saya</button>
+    <p id="hasilNama" class="hasil">Hasil sapaan akan ditampilkan disini.</p>
+    <hr />
+    <h3> 2. Memilih Warna Favorit</h3>
+    <label for="pilihwarna">Pilih Warna:</label>
+    <select id="pilihwarna">
+        <option value="">--Pilih Warna--</option>
+        <option value="red">Merah</option>
+        <option value="blue">Biru</option>
+    </select>
+    <p id="hasilWarna" class="hasil">Warna yang dipilih akan ditampilkan di sini.</p>
+</body>
+</xhtml>
